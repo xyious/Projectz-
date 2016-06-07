@@ -4,7 +4,7 @@
 <p>Projects: </p>
 
 <table id = "projects">
-  <th>Project name</th><th>Customer</th><th>Deadline</th><th>Description</th>Project Lead</th>
+  <th>Project name</th><th>Customer</th><th>Deadline</th><th>Description</th><th>Project Lead</th>
   <% @projects.each do |c| %>
   <tr><td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
   <td><%= c.customer %></td>

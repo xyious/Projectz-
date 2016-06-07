@@ -166,3 +166,8 @@ input {
     border-bottom: 1px solid $gray-lighter;
   }
 }
+
+/* Tables */
+
+table { width: 100%; margin-bottom: 50px; }
+th,td { padding-right: 50px; }
