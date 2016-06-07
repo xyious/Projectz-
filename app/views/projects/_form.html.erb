@@ -1,0 +1,17 @@
+<%= form_for(@project) do |f| %>
+  <%= render 'shared/project_error_messages', object: @user %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, class: 'form-control' %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description, class: 'form-control' %>
+
+  <%= f.label :customer %>
+  <%= f.text_field :customer, class: 'form-control' %>
+
+  <%= f.label :deadline %>
+  <%= f.datetime_select :deadline, class: 'form-control' %>
+
+  <%= f.submit yield(:button_text), class: "btn btn-primary" %>
+<% end %>

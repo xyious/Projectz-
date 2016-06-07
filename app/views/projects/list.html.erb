@@ -1,0 +1,17 @@
+<% if @projects.blank? %>
+<p>There are no Projects.... yet.</p>
+<% else %>
+<p>Projects: </p>
+
+<table id = "projects">
+  <th>Project name</th><th>Customer</th><th>Deadline</th><th>Description</th>Project Lead</th>
+  <% @projects.each do |c| %>
+  <tr><td><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+  <td><%= c.customer %></td>
+  <td><%= c.deadline %></td>
+  <td><%= c.description %></td>
+  </tr><% end %>
+</table>
+
+<% end %>
+<p><%= link_to "Create Project", {:action => 'new' }%></p>
