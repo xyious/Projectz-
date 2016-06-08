@@ -15,7 +15,7 @@ class ProjectsController < ApplicationController
   end
 
   def edit
-    project = Project.find(params[:id])
+    @project = Project.find(params[:id])
   end
 
   def update
@@ -37,6 +37,10 @@ class ProjectsController < ApplicationController
 
   def list
     @projects = Project.all
+  end
+
+  def show
+    @project = Project.find(params[:id])
   end
 
   private

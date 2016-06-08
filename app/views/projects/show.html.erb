@@ -1,0 +1,6 @@
+<% provide(:title, @project.name) %>
+<h1><%= @project.name %></h1>
+<p>Customer: <%= @project.customer %></p>
+<p>Description: <%= @project.description %></p>
+<p>Deadline: <%= @project.deadline %>
+<p><%= link_to 'Edit', edit_project_path(@project) %></p>
