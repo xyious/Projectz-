@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  project: one
+  name: MyString
+  description: MyText
+  progress: 1
+  estimated_hours: 1
+  deadline: 2016-06-14 02:49:55
+  status: 1
+  time_worked: 1
+
+two:
+  project: two
+  name: MyString
+  description: MyText
+  progress: 1
+  estimated_hours: 1
+  deadline: 2016-06-14 02:49:55
+  status: 1
+  time_worked: 1

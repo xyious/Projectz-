@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160607054501) do
+ActiveRecord::Schema.define(version: 20160614074955) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -39,4 +39,19 @@ ActiveRecord::Schema.define(version: 20160607054501) do
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
   end
 
+  create_table "work_units", force: :cascade do |t|
+    t.integer  "project_id"
+    t.string   "name"
+    t.text     "description"
+    t.integer  "progress"
+    t.integer  "estimated_hours"
+    t.datetime "deadline"
+    t.integer  "status"
+    t.integer  "time_worked"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["project_id"], name: "index_work_units_on_project_id", using: :btree
+  end
+
+  add_foreign_key "work_units", "projects"
 end
