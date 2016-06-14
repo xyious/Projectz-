@@ -1,0 +1,2 @@
+class WorkUnitsController < ApplicationController
+end
