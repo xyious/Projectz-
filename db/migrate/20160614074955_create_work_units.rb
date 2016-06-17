@@ -5,7 +5,8 @@ class CreateWorkUnits < ActiveRecord::Migration[5.0]
       t.string :name
       t.text :description
       t.integer :progress
-      t.integer :estimated_hours
+      t.integer :estimated_hours_best_case
+      t.integer :estimated_hours_worst_case
       t.datetime :deadline
       t.integer :status
       t.integer :time_worked

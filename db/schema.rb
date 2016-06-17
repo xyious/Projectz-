@@ -44,12 +44,13 @@ ActiveRecord::Schema.define(version: 20160614074955) do
     t.string   "name"
     t.text     "description"
     t.integer  "progress"
-    t.integer  "estimated_hours"
+    t.integer  "estimated_hours_best_case"
+    t.integer  "estimated_hours_worst_case"
     t.datetime "deadline"
     t.integer  "status"
     t.integer  "time_worked"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
     t.index ["project_id"], name: "index_work_units_on_project_id", using: :btree
   end
 
