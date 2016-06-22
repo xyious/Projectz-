@@ -2,14 +2,16 @@
 
 one:
   username: MyString
-  name: MyString
+  displayname: MyString
   email: MyString
-  password_digest: MyString
+  company: MyString
   admin: false
+  password_digest: MyString
 
 two:
   username: MyString
-  name: MyString
+  displayname: MyString
   email: MyString
-  password_digest: MyString
+  company: MyString
   admin: false
+  password_digest: MyString
